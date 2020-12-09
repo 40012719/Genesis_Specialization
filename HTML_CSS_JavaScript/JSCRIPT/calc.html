@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="commonfunct.js"></script>
+    <style>
+        *{
+             background-color: lemonchiffon;
+             font-family:Georgia, 'Times New Roman', Times, serif ;
+
+        }
+        body{
+            text-align: center;
+        }
+        button{
+            background-color: cadetblue;
+            width: 100px;
+            height:  50px ;
+            font-size: 30pt;
+            color: darkblue;
+        }
+        input:focus{
+            background-color: khaki;
+            color: indigo;
+        }
+    </style>
+    <script>
+        function onadd(){
+            //take the input values
+            const firstval=$get("val1").value;
+            const secval=$get("val2").value;
+            const result=add(firstval, secval);
+            $get("spResult").innerText=result;
+            //call the addfunc
+            //display in the span element   
+        }
+        function onsub(){
+            //take the input values
+            const firstval=$get("val1").value;
+            const secval=$get("val2").value;
+            const result=sub(firstval,secval);
+            $get("spResult").innerText=result;
+            //call the addfunc
+            //display in the span element   
+        }
+        function onmul(){
+            //take the input values
+            const firstval=$get("val1").value;
+            const secval=$get("val2").value;
+            const result=mul(firstval,secval);
+            $get("spResult").innerText=result;
+            //call the addfunc
+            //display in the span element   
+        }
+        function ondiv(){
+            //take the input values
+            const firstval=$get("val1").value;
+            const secval=$get("val2").value;
+            const result=div(firstval,secval);
+            $get("spResult").innerText=result;
+            //call the addfunc
+            //display in the span element   
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h1>CALCULATOR</h1>
+        <hr>
+        <p>Enter the First Value:
+             <input type="number" id="val1">
+        </p>
+        <P>Enter the Second Value: 
+            <input type="number" id="val2">
+        </p>
+        <p>
+            <button onclick="onadd()">+</button>
+            <button onclick="onsub()">-</button>
+            <button onclick="onmul()">*</button>
+            <button onclick="ondiv()">/</button>
+        </p>
+        <p>The Result 
+            <span id="spResult">
+
+        </span >
+    </p>
+    </div>
+</body>
+</html>

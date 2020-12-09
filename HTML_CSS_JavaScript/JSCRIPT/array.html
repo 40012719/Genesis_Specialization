@@ -1,0 +1,41 @@
+<html>
+    <head>
+    <script>
+       /* 
+            const element=["sandy","dharun","pavin"]
+            for(const i of element)
+            console.log(i)
+            const names=new Array(5)
+            for(let index=0;index<names.length;index++)
+            {
+                names[index]=prompt("Enter your sweet name")
+            }
+            for(const index of names)
+            console.log(index)
+        
+
+    */
+            let b=[];
+            let ind=0;
+            do{
+                const item=prompt("Enter what to buy");
+                b.unshift(item);
+                ind++;
+            }while(ind<=5);
+            //push add the item end of the array
+            //unshift add the item start of the array
+            //pop removes the item last of the array
+            //shift removes the item start of the array
+            //splice is used to add/remove inbetween
+        </script>
+    </head>
+    <body>
+        <h3>List to buy</h3>
+        <ol type="1">
+            <script>
+                for(const i of b)
+                document.write("<li>"+i+"</li>");
+            </script>
+        </ol>
+    </body>
+</html>

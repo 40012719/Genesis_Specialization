@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>User Details</title>
+    <style>
+        body{
+            background-color: gold;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+             text-align: center;
+            font-size: 18px;
+        }
+    </style>
+    <script>
+        function saveData(){
+            if(document.getElementById("uname").value=="")
+                alert("Please Enter the Username");
+            
+            localStorage.setItem('name', document.getElementById("uname").value)
+            localStorage.setItem('dateOfBirth', document.getElementById("dateOfBirth").value)
+            localStorage.setItem('department', document.getElementById("department").value)
+            localStorage.setItem('gd', document.getElementById("gd").value)
+            alert("Submit Successful!!")
+        }
+        function showData(){
+            document.getElementById("Display").innerHTML=
+            `Name:${localStorage.getItem('name')}</br>
+            Date of Birth:${localStorage.getItem('dateOfBirth')}</br>
+            Type:${localStorage.getItem('gd')}</br>
+            Department:${localStorage.getItem('department')}</br>`;
+           
+        }
+    </script>
+</head>
+<body>
+    <form action="#">
+        <p>Enter your name : <input type="text" name="uname" id="uname"></p>
+        <p>Enter Date of Birth : <input type="date" name="dateOfBirth" id="dateOfBirth"></p>
+        <p>Type : <input type="radio" name="gd" id="gd" value="UG">UG <input type="radio" name="gd" id="gd" value="PG">PG</p>
+        <p>Select your Department : <select name="department" id="department">
+            <option value="CSE">Computer Science</option>
+            <option value="EE">Electronics Engineering</option>
+            <option value="IS">Information Science</option>
+            <option value="CE">Civil Engineering</option>
+        </select></p>
+        <p><input type="button" value="Submit" onclick="saveData()"></p>
+    </form>
+    <input type="button" value="DisplayDetails" onclick="showData()">
+    <div id="Display"></div>
+</body>
+</html>

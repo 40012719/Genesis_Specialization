@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        //named function
+        function testfunc()
+        {
+            alert("function is called");
+        }
+        testfunc();
+        //call back functions
+        const simplefunc= function(){
+            alert("Anonymous function")
+        }
+        simplefunc();
+        const addfunc=function add(v1,v2)
+        {
+            return v1-v2;
+        }
+        //input from the user will be taken as string and using parseInt can convert it into int
+        const dfgfx=prompt("Enter the values");
+        if(!isNaN(dfgfx))
+        {
+            alert("Not a valid number")
+        }
+        else 
+        {
+            v1=dfgfx
+        }
+        let sda=prompt("Enter v2 value");
+        if(!isNaN(sda))
+        {
+            alert("Not a valid number")
+        }
+        else 
+        { 
+           v2=sda
+        }
+        console.log(addfunc(v1,v2));
+       // anonymous function are created by assigned variables
+       //for adding only needed adding parseint but for other mathematical calculations you need not use parseInt function
+       //NaN(not a number) is a value for the value when it tries to convert a non numeric string to a number
+       //ifNan is used to check
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="ass3func.js"></script>
+    <script src="commonfunct.js"></script>
+    <script> 
+    var i=1
+        function displayRecords()
+        {  
+          
+            //var id=$get("num").value;
+            var des=$get("des").value;
+            var date=$get("date").value;
+            var amount=$get("amount").value;
+          //  let c=new  Customer(i,des);
+            let row ="<tr><td>"+i+"</td>";
+               row +="<td>"+des+"</td>";
+               row +="<td>"+date+"</td>";
+               row +="<td>"+amount+"</td></tr>";
+                $get("tblRecords").innerHTML += row; 
+                i++;
+                document.getElementById("des").value="";
+                document.getElementById("date").value="";
+                document.getElementById("amount").value="";
+        }
+   
+    </script>
+    <style>
+        body{
+            background-color: lightpink;
+        }
+        header{
+            text-shadow: black;
+            text-decoration: black;
+            text-align: center;
+            background-color: blue;
+            height: 50px;
+            padding-top: 36px;
+
+        }
+        #main{
+           text-align: center;
+        }
+        #tblRecords{
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <header><b>CUSTOMER DETAILS</b></header>
+   
+    <div id="main">
+    <h1>
+       <p1> Enter the description<input type="text" id="des">
+    </p1><br>
+       <p1>  Enter the Date<input type="date" id="date">
+    </p1><br>
+       <p1></p1> Enter the Amount<input type="number" id="amount">
+    </p1><br>
+       <p1>  
+           <button onclick="displayRecords()" type="submit" value="submit">submit</button></p1>
+    </h1></div>
+    <hr>
+    <span id="result">
+    <table id="tblRecords"border="1">
+        <tr>
+            <th>S.no</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Amount</th>
+        </tr>
+    </table>
+</span>
+</body>
+</html>

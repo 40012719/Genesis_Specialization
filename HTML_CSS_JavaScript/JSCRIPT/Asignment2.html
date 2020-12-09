@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <script src="ass2func.js"></script>
+    <style>
+        button{
+            background-color: blue;
+            width:100px;
+            height:60px;
+            font-size: 15pt;
+            color :white;
+        }
+        input{
+            height:30px;
+        }
+        input:focus
+        {
+            background-color: whitesmoke;
+            color: rgb(10, 6, 1);
+        }
+        body{
+            background-color: lightgray;
+            text-align: center;
+        }
+        marquee{
+            color: steelblue;
+        }
+        table{
+            background-color: lawngreen;
+            color: lawngreen;
+            border: 1px solid black;
+            align-content: center;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            width: 500px;
+        }
+        #id2
+        {
+            color: rgb(10, 6, 1);
+        }
+        #id3
+        {
+            text-align: left;
+            height: 50px;
+
+        }
+        #id4
+        {
+           text-align:center ;
+           scroll-padding-left: 25px;
+        }
+    </style>
+    <script>
+        function onadd(){
+            //take ip and add and display in span
+           const firstval= $get("val1").value;
+           const rate= $get("rate").value;
+           
+           const half= siadd(firstval);
+           const result= half*rate;
+
+           $get("spresult").innerText=result;
+
+        }
+       
+    </script>
+</head>
+<body>
+    <div>
+<h1> SIMPLE INTEREST CALCULATOR</h1>
+<hr>
+<marquee id="id1" behavior="scroll" direction="left">Enter the principle value and select the rate of interest from the scroll box!!!!</marquee>
+<table>
+<tr><td id="id2">Enter Amount:</td><td id="id3"><input type="number" id="val1"></td></tr>
+<tr><td id="id2">Select Rate:</td>
+   <td id="id3"> <select type="number" id="rate">
+        <option>-----SELECT FROM THE LIST -----</option>
+        <option>0.2</option>
+        <option>0.4</option>
+        <option>0.6</option>
+        <option>0.8</option>
+        <option>1</option>
+    </select></td></tr>
+<tr><td id="id4">
+    <button onclick="onadd()" type="submit">calculate</button>   
+</td>></tr>
+</table>
+<p><B>OUTPUT:</B>
+ <span id="spresult"></span> 
+</p>
+        </div>  
+</body>
+</html>
+
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Accessing Elements</title>
+    
+</head>
+    <body>
+        <h1>
+        Accessing DOM Elements
+        </h1>
+        <hr>
+          <div>
+        <p  id="pname">I am Shandhiya</p>
+        <p  id="address">From Tamil Nadu</p>
+        <p  id="work">LTTS Intern</p>
+          </div>
+        <div>
+        <hr>
+            <ul id="data">
+            </ul>
+            </div>
+            <script>
+            //first get the reference of the variable you want to get
+            /* let p1=document.getElementById("pname");
+            for(let i=0;i<4;i++)
+                    document.write(p1.innerText)
+            p1=document.getElementById("address");
+            console.log(p1.innerText)
+                p1=document.getElementById("work");
+            console.log(p1.innerText)
+            */
+            const items = [];
+
+            let processing=true;
+            const list=document.getElementById("data");
+            do{
+                items.push(prompt("Enter the value"));
+                list.innerHTML="";//removes old items
+                for (const item of items)
+                {
+                        list.innerHTML += "<li>" + item + "<li>" ;
+                }
+                 processing= confirm("Do you want to continue") ;
+            }while(processing);  
+        </script>
+    </body>
+</html>

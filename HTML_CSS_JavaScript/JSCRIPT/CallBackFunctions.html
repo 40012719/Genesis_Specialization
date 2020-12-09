@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Document</title>
+        <script src="commonfunct.js"></script>
+        <script>
+            function callme()
+            {
+                $get("display").innerText="Some action is done here"
+            }
+            function performAction(){
+                setTimeout(callme,300);
+            }
+        </script>
+    <!--    
+         function callme()
+            {
+                $get("display").innerText="Some action is done here"
+            }
+            function performAction(){
+                setTimeout(callme,300);
+            }
+        </script>    -->
+</head>
+<body>
+    <div>
+        <button onclick="performAction()">Touch me</button>
+        <p id="display"></p>
+    </div>
+    
+</body>
+</html>
